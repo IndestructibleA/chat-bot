@@ -1,0 +1,79 @@
+
+body {
+  background-color: #eee;
+}
+
+.botWindow {
+
+  position: relative;
+  float: right;
+  right: 100px;
+
+  background-color: #ffff00;
+  width: 300px;
+  height: 300px;
+  border: 2px dashed;
+  border-radius: 10%;
+  border-color: #ff00ff;
+  animation: open-chat 2s 3s both ease-in-out;
+  overflow: hidden;
+
+  }
+
+.inputText {
+  float: left;
+  width: 115px;
+  margin-left: 1px;
+  border-radius: 5px 0 0 5px;
+  border-color: red;
+}
+
+.sendMessage {
+
+  border: 2px solid #000;
+  position: relative;
+  margin: 5px;
+  color: green;
+    
+
+  }
+
+
+  .avatar{
+  width:230px;
+  height:50px;
+  background:#302112;
+  color:#fff;
+}
+
+
+/* Алёрт тут для изменения текста. КОроч бум ваят, повоюем нах */
+.alert{   
+  color: blue;
+}
+
+/* АНИМАЦИЯ */
+
+@keyframes open-chat { 
+from {
+ height:0px;
+}
+to {
+  height:300px;
+}
+}
+
+#printMessage {
+  animation: writingMessage 1s linear infinite;
+  font-size: 12px;
+  padding: 0;
+  display: none;
+}
+@keyframes writingMessage {
+  from { 
+    background:#3caa3c;
+  }
+  to { 
+    background:#008000;
+  }
+}
