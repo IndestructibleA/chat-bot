@@ -26,14 +26,16 @@ window.onload=function() {
 
   
   let inputText = document.createElement('input');
-  inputText.className='inputText';
+  inputText.className='inputTxt';
   document.body.appendChild(inputText);
+  let parentWindow = document.querySelector('.botWindow');
+  parentWindow.append(inputText);
 
   let printMessage = document.createElement('div');
   printMessage.className='printMessage';
   document.body.appendChild(printMessage);
   //document.body.append(printMessage);
- 
+  
     
   // КНОПКА ТУТ //
 
@@ -42,6 +44,8 @@ window.onload=function() {
   send.className='sendMessage';
   let sendText = document.createTextNode('Отправить'); 
   send.appendChild(sendText); //добавляем текст в кнопку
+  let parentButton = document.querySelector('.botWindow');
+  parentButton.append(sendText);
   
     if(value = true){
     document.body.appendChild(send);
