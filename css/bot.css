@@ -5,33 +5,40 @@ body {
 
 .botWindow {
 
-  position: relative;
-  float: right;
-  right: 100px;
+  /* Расстояние от правого угла */ 
+  bottom: 25px;
+  right: 25px;
 
-  background-color: #ffff00;
-  width: 300px;
+  position: absolute;
+  float: auto;
+  background-color: #763c28;
+  width: 270px;
   height: 300px;
   border: 2px dashed;
-  border-radius: 10%;
-  border-color: #ff00ff;
+  border-radius: 5%;
+  border-color: white;
   animation: open-chat 2s 3s both ease-in-out;
   overflow: hidden;
 
   }
 
 .inputTxt {
-  float: left;
-  width: 115px;
+  position: absolute;
+  bottom: 20px;
+  right: 105px;
+  width: 155px;
   margin-left: 1px;
   border-radius: 5px 0 0 5px;
-  border-color: red;
+  border-color: green;
 }
 
 .sendMessage {
 
+  position: absolute;
+  bottom: 16px;
+  right: 1px;
+
   border: 2px solid #000;
-  position: relative;
   margin: 5px;
   color: green;
     

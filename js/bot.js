@@ -20,9 +20,9 @@ let $ = document; // shortcut
 window.onload=function() {
   let chatBot = document.createElement('form');
   chatBot.className='botWindow';
-  chatBot.id = 'botWindow';
+  chatBot.id = 'main';
   document.body.appendChild(chatBot);
-  log(botWindow);
+  //log(botWindow);
 
   
   let inputText = document.createElement('input');
@@ -36,7 +36,12 @@ window.onload=function() {
   document.body.appendChild(printMessage);
   //document.body.append(printMessage);
   
-    
+  // let avatarka = document.createElement('img');
+  // avatarka.className = '.avatar';
+  // avatarka.document.querySelector('.botWindow');
+  // avatarka.append('img');
+
+
   // КНОПКА ТУТ //
 
   let value = true 
@@ -45,11 +50,12 @@ window.onload=function() {
   let sendText = document.createTextNode('Отправить'); 
   send.appendChild(sendText); //добавляем текст в кнопку
   let parentButton = document.querySelector('.botWindow');
-  parentButton.append(sendText);
+  
   
     if(value = true){
     document.body.appendChild(send);
-
+    parentButton.append(send);
+    //parentButton.append(sendText);
   }
 
   }
