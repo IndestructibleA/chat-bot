@@ -1,6 +1,9 @@
 
 // ПОДКЛЮЧЕНИЕ СТИЛЕЙ CSS //
 let $ = document; // shortcut
+let text = "Доброго времени суток. Вы пожаловали на %site-name%! Что бы вы хотели узнать?";
+let textNode = document.createTextNode(text);
+
 
   let cssId = 'myCss';  // you could encode the css path itself to generate id..
 
@@ -24,18 +27,23 @@ window.onload=function() {
   document.body.appendChild(chatBot);
   //log(botWindow);
 
+  let newDiv = document.createElement('div');
+    newDiv.className='divTop';
+    newDiv.id = 'div-top';
+    document.body.appendChild(newDiv);
+  let childDivTop = document.querySelector('.botWindow');
+    childDivTop.append(newDiv);
+    childDivTop.innerHTML = "Бот Виталик рогалик";
+    //childDivTop.innerHTML = inputText.value;
+
   
   let inputText = document.createElement('input');
-  inputText.className='inputTxt';
-  document.body.appendChild(inputText);
+    inputText.className='inputTxt';
+    document.body.appendChild(inputText);
   let parentWindow = document.querySelector('.botWindow');
-  parentWindow.append(inputText);
+    parentWindow.append(inputText);
 
-  let printMessage = document.createElement('div');
-  printMessage.className='printMessage';
-  document.body.appendChild(printMessage);
-  //document.body.append(printMessage);
-  
+
   // let avatarka = document.createElement('img');
   // avatarka.className = '.avatar';
   // avatarka.document.querySelector('.botWindow');
@@ -46,16 +54,17 @@ window.onload=function() {
 
   let value = true 
   let send = document.createElement('button');//создаём кнопку
-  send.className='sendMessage';
+    send.className='sendMessage';
   let sendText = document.createTextNode('Отправить'); 
-  send.appendChild(sendText); //добавляем текст в кнопку
-  let parentButton = document.querySelector('.botWindow');
+    send.appendChild(sendText); //добавляем текст в кнопку
+  let childButton = document.querySelector('.botWindow');
   
   
     if(value = true){
     document.body.appendChild(send);
-    parentButton.append(send);
-    //parentButton.append(sendText);
+    childButton.append(send);
+    //childButton.append(sendText);
+    newDiv.innerHTML = inputText.value;
   }
 
   }
